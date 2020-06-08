@@ -12,7 +12,7 @@ router.post('/api/v1/morpheme-analysis', function (req, res) {
   mecab.pos(text, function (err, result) {
     console.log('text:', text, 'nouns:', result);
     res.json({
-      nouns: result
+      tags: result
     });
   });
 });
@@ -27,7 +27,7 @@ app.get('/ping', function(req, res){
     timestamp: new Date(),
     message: 'alive',
     success: true
-  })
+  })g
 });
 
 app.listen(process.env.PORT || 8080);
