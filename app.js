@@ -27,7 +27,7 @@ app.get('/ping', function(req, res){
     timestamp: new Date(),
     message: 'alive',
     success: true
-  })g
+  })
 });
 
 app.listen(process.env.PORT || 8080);
