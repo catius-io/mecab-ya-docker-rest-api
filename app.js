@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/api/v1/morpheme-analysis', function (req, res) {
   const text = req.body.text;
-  mecab.nouns(text, function (err, result) {
+  mecab.pos(text, function (err, result) {
     console.log('text:', text, 'nouns:', result);
     res.json({
       nouns: result
